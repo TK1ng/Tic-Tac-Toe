@@ -1,10 +1,9 @@
-import React from 'react';
 
-
-const Square = ({propVar}) => {
+const Square = ({ player, gameboard}) => {
+    console.log(player, gameboard)
     return ( 
         <div className="square">
-            Hi, {propVar}!
+            Hi, King!
         </div>
      );
 }
