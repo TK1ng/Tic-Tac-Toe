@@ -3,7 +3,7 @@ import Square from './components/Square';
 
 function App() {
   const [player, setPlayer] = useState(true);
-  const [gameboard, setGameboard] = useState(Array.from({ length: 9 }, (v, i) => ''));
+  const [squares, setSquares] = useState(Array.from({ length: 9 }, (v, i) => ''));
 
   return (
     <div className="App">
@@ -12,7 +12,11 @@ function App() {
           Let's play Tic-Tac-Toe!
         </p>
       </header>
-      <Square player={player} gameboard={gameboard} />
+      <div className="container">
+        {squares.map((v, i) =>
+          <Square player={player} setPlayer={setPlayer} squareValue={v} index={i} key={i} />
+        )}
+      </div>
     </div>
   );
 }

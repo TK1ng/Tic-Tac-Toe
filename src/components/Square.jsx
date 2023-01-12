@@ -1,9 +1,8 @@
 
 const Square = ({ player, gameboard}) => {
-    console.log(player, gameboard)
     return ( 
         <div className="square">
-            Hi, King!
+            A square!
         </div>
      );
 }
