@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --dk-bg: #202120;
+    --btn-hover: indigo;
+    --reset-btn-primary: indigo;
+    --reset-btn-hover: rgb(149, 49, 220);
+    --x-icon: rgb(177, 90, 238);
+    --transition: 0.2s all ease;
+}
+
+body {
+    background-color: var(--dk-bg);
+    color: rgba(255,255,255, 0.8);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.App {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem 0;
+}
+
+.container {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 160px);
+    height: 25rem;
+    margin-top: 4rem;
+}
+
+.reset-btn {
+    margin-top: 1.5rem;
+    padding: .7rem;
+    border-radius: 10px;
+    background: var(--reset-btn-primary);
+    color: rgba(255, 255, 255, 0.4);
+    border: none;
+    transition: var(--transition);
+}
+
+.reset-btn:hover {
+    background: var(--reset-btn-hover);
+    color: #fff;
+}
