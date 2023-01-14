@@ -1,5 +1,3 @@
-import { useContext } from 'react';
-import GameContext from '../model/GameContext';
 import './Square.css';
 
 

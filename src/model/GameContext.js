@@ -1,9 +1,8 @@
-import { useState, createContext } from 'react';
+import { createContext } from 'react';
 
 const GameContext = createContext({
     name: 'King',
-    player: {},
-    players: [{ id: 1, name: 'Taryn', piece: 'X' }, { id: 2, name: 'Bri', piece: 'O' }],
+    players: [{ id: 1, name: '', piece: 'X' }, { id: 2, name: '', piece: 'O' }],
     board: [
         [
             { one: 1 }, { two: 0 }, { three: 2 }

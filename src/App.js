@@ -1,5 +1,4 @@
-import { useState, useContext } from 'react';
-import PersonContext from './model/GameContext';
+import { useState } from 'react';
 import Square from './components/Square';
 import './App.css';
 
