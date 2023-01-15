@@ -1,9 +1,7 @@
-import './Square.css';
+import styles from './Square.module.css';
 
 
 const Square = (props) => {
-
-    // const game = useContext(GameContext);
 
     const handleClick = () => {
         if (!props.squareValue) {
@@ -20,7 +18,7 @@ const Square = (props) => {
     }
 
     return ( 
-        <button className="square" onClick={handleClick} disabled={props.gameStatus}>
+        <button className={styles.square} onClick={handleClick} disabled={props.gameStatus}>
           {props.squareValue === 'O' ? <img src="https://cdn.discordapp.com/attachments/830137099042816080/984895322184634448/devcircle_1.png" alt="DevMountain logo"/> : props.squareValue}
         </button>
      );
