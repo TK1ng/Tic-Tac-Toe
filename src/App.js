@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Square from './components/Square';
-import './App.css';
+import styles from './App.module.css';
 
 function App() {
   const [player, setPlayer] = useState(true);
@@ -34,15 +34,15 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className={styles.App}>
+      <header className={styles['App-header']}>
         <h1>
           Tic-Tac-Toe: A Game
         </h1>
       </header>
-      <div class="game-status">{gameStatus === null ? 'In play...' : `The winner is ${gameStatus}`}</div>
-      <button className="reset-btn" onClick={handleReset}>Reset</button>
-      <div className="container">
+      <div class={styles['game-status']}>{gameStatus === null ? 'In play...' : `The winner is ${gameStatus}`}</div>
+      <button className={styles['reset-btn']} onClick={handleReset}>Reset</button>
+      <div className={styles.container}>
         {squares.map((val, index) =>
 
           <Square gameStatus={gameStatus} player={player} setPlayer={setPlayer} squares={squares} setSquares={setSquares} squareValue={val} index={index} key={index} />
